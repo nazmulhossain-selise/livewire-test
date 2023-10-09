@@ -13,6 +13,11 @@ class PostController extends Controller
         return view('posts', compact('posts'));
     }
 
+    public function create()
+    {
+        return view('create-post');
+    }
+
     public function edit($postId)
     {
         $post = Post::find($postId);
